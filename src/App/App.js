@@ -1,9 +1,8 @@
 import { CssBaseline, makeStyles } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider  } from '@material-ui/core/styles';
-import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import Header from '../components/Header';
-import PageHeader from '../components/PageHeader';
 import SideMenu from '../components/SideMenu';
+import Doctors from "../pages/Doctors/Doctors"
 
 import './App.css';
 
@@ -43,12 +42,7 @@ function App() {
       <SideMenu />
       <div className={classes.appMain}>
         <Header />
-        <PageHeader 
-        title = "Page Header"
-        subtitle = "Page description"
-        icon = {<PeopleOutlineIcon fontSize="large"/>}
-        />
-          
+        <Doctors />
       </div>
       {/* Adding common css rules with CssBaseline */}
       <CssBaseline /> 

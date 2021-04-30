@@ -1,6 +1,7 @@
 import { Card, makeStyles, Paper, Typography } from '@material-ui/core'
 import React from 'react'
 
+//? Define common css for all pages in app
 const useStyles = makeStyles(theme => ({
     root: {
         backgroundColor: '#fdfdff'
@@ -23,6 +24,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+//? Common component for pages
 export default function PageHeader(props) {
     const classes = useStyles();
     const {title, subtitle, icon} = props;

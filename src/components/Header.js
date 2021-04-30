@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme =>({
     }
 }))
 
+//? App's Header component
 export default function Header() {
     const classes = useStyles();
 
