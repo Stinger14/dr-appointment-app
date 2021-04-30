@@ -1,15 +1,7 @@
 import { Grid, makeStyles, TextField } from '@material-ui/core';
 import React, {useState, useEffect} from 'react'
-import useForm from '../../components/useForm';
+import {useForm, Form} from '../../components/useForm';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        '& .MuiFormControl-root': {
-            width: '80%',
-            margin: theme.spacing(1)
-        }
-    }
-}))
 
 //TODO define properties for Doctor component
 const initFieldVals = {
@@ -28,9 +20,6 @@ const initFieldVals = {
 //TODO Validate Doctor's form 
 export default function DoctorForm() {
 
-    
-    const classes = useStyles();
-
     const {
         values,
         setValues,
@@ -38,7 +27,8 @@ export default function DoctorForm() {
     } = useForm(initFieldVals);
 
     return (
-        <form className={classes.root}>
+        
+            <Form>
             <Grid container>
                 <Grid item xs={6}>
                     <TextField 
@@ -59,6 +49,7 @@ export default function DoctorForm() {
                 
                 </Grid>
             </Grid>
-        </form>
+            </Form>
+        
     )
 }
